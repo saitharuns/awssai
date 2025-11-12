@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Received</title><link rel="stylesheet" href="assets/css/received.css"></head>
+<body>
+<div class="container">
+  <h1>Received Records</h1>
+  <p><a href="index.php">&larr; Back to Home</a></p>
+  <form id="receivedForm">
+    <input type="hidden" id="rid">
+    <div class="row">
+      <label>Division<select id="division"><option value="">--Select--</option><option>Electrical</option><option>Mechanical</option><option>Civil</option></select></label>
+      <label>Sub Division<select id="sub_division"><option value="">--Select--</option></select></label>
+      <label>Section<select id="section"><option value="">--Select--</option></select></label>
+      <label>Capacity<select id="capacity"><option value="">--Select--</option><option>25 kVA</option><option>63 kVA</option><option>100 kVA</option><option>160 kVA</option><option>250 kVA</option><option>500 kVA</option></select></label>
+    </div>
+    <div class="row">
+      <label>Make<input id="make"></label>
+      <label>TCSL<input id="tcsl"></label>
+      <label>DTR No<input id="dtr_no"></label>
+      <label>Oil<input id="oil"></label>
+    </div>
+    <div class="row">
+      <label>Vehicle No<input id="vehicle_no"></label>
+      <label>Vehicle Person<input id="vehicle_person"></label>
+      <label>Received Date<input type="date" id="received_date"></label>
+    </div>
+    <div class="row">
+      <label>Core Numbers<input id="core_numbers"></label>
+      <label>Mass Numbers<input id="mass_numbers"></label>
+      <label>PGRS No<input id="pgrs_no"></label>
+      <label>SVEEW No<input id="sveew_no"></label>
+    </div>
+    <div class="actions"><button id="save">Save</button><button type="button" id="reset">Reset</button></div>
+  </form>
+
+  <div class="filter">
+    <input id="search" placeholder="Search...">
+    <input type="date" id="dateFrom"><input type="date" id="dateTo">
+    <button id="filterBtn">Filter</button><button id="clearFilter">Clear</button>
+  </div>
+
+  <table id="recordsTable"><thead><tr><th>ID</th><th>Division</th><th>Sub Division</th><th>Section</th><th>Capacity</th><th>Make</th><th>TCSL</th><th>DTR No</th><th>Oil</th><th>Vehicle No</th><th>Vehicle Person</th><th>Received Date</th><th>Core Numbers</th><th>Mass Numbers</th><th>PGRS No</th><th>SVEEW No</th><th>Actions</th></tr></thead><tbody></tbody></table>
+</div>
+<script src="assets/js/received.js"></script>
+</body></html>
